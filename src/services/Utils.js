@@ -64,7 +64,7 @@ class PrivateUtils {
       let max = arrayOfNumbers[0];
 
       for (let i = 1; i < length; i += 1) {
-        max = arrayOfNumbers[i] > max ? arrayOfNumbers[i] : max;
+        max = Math.max(arrayOfNumbers[i], max);
       }
 
       // We could also use `Array.prototype.forEach()`
