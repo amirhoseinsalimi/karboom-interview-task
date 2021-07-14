@@ -1,14 +1,7 @@
 {
-  "data": {
-    "1": {
-      "title": {
-        "text": "Build"
-      },
-      "description": "lorem ipsum dolor sit amet",
-      "img": "https://source.unsplash.com/random",
-      "color": "#ec5858"
-    },
-    "2": {
+  "data": [
+    {
+      "id": "2",
       "title": {
         "text": "your"
       },
@@ -16,7 +9,8 @@
       "img": "https://source.unsplash.com/random",
       "color": "#9ad3bc"
     },
-    "3": {
+    {
+      "id": "3",
       "title": {
         "text": "weaknesses"
       },
@@ -24,7 +18,8 @@
       "img": "https://source.unsplash.com/random",
       "color": "#16a596"
     },
-    "4": {
+    {
+      "id": "4",
       "title": {
         "text": "until"
       },
@@ -32,7 +27,8 @@
       "img": "https://source.unsplash.com/random",
       "color": "#b8de6f"
     },
-    "5": {
+    {
+      "id": "5",
       "title": {
         "text": "they"
       },
@@ -40,7 +36,8 @@
       "img": "https://source.unsplash.com/random",
       "color": "#2d6187"
     },
-    "6": {
+    {
+      "id": "6",
       "title": {
         "text": "become"
       },
@@ -48,7 +45,8 @@
       "img": "https://source.unsplash.com/random",
       "color": "#28df99"
     },
-    "7": {
+    {
+      "id": "7",
       "title": {
         "text": "your"
       },
@@ -56,7 +54,8 @@
       "img": "https://source.unsplash.com/random",
       "color": "#9d65c9"
     },
-    "8": {
+    {
+      "id": "8",
       "title": {
         "text": "strong"
       },
@@ -64,7 +63,8 @@
       "img": "https://source.unsplash.com/random",
       "color": "#3e978b"
     },
-    "9": {
+    {
+      "id": "9",
       "title": {
         "text": "points"
       },
@@ -72,5 +72,5 @@
       "img": "https://source.unsplash.com/random",
       "color": "#00334e"
     }
-  }
+  ]
 }
