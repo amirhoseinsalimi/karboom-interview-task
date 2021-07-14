@@ -83,7 +83,7 @@ export default {
 
   async beforeCreate() {
     try {
-      this.items = await RestService.index('/data');
+      this.items = await RestService.index();
     } catch (e) {
       // TODO: Handle error
       console.log(e)
