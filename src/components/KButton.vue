@@ -68,7 +68,11 @@ export default {
 @import "src/assets/scss/typography";
 
 .k-button {
-  border: none;
+  border: {
+    style: solid;
+    radius: 6px;
+    color: transparent;
+  }
   padding: 10px;
   transition: transform 400ms;
 
