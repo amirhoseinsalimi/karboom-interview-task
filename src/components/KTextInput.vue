@@ -10,12 +10,12 @@
 
     <input
       type="text"
-      v-model="searchText"
+      v-model="text"
       :placeholder="placeholder"
       :style="{
         paddingLeft: hasSlot ? '40px' : '',
       }"
-      @input="$emit('input', searchText)"
+      @input="$emit('input', text)"
       @keyup.enter="$emit('enterkey')"
     >
   </label>
@@ -45,7 +45,7 @@ export default {
 
   data() {
     return {
-      searchText: '',
+      text: '',
     }
   },
 
