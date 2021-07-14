@@ -40,4 +40,22 @@ class PrivateUtils {
     static generateRandomNumber(max) {
         return Math.floor(Math.random() * max)
     }
+
+    /**
+     * Return the biggest number of an array of numbers
+     * @param arrayOfNumbers
+     * @returns {number}
+     */
+    static max(arrayOfNumbers) {
+      const length = arrayOfNumbers.length;
+      let max = arrayOfNumbers[0];
+
+      for (let i = 1; i < length; i += 1) {
+        max = arrayOfNumbers[i] > max ? arrayOfNumbers[i] : max;
+      }
+
+      // We could also use `Array.prototype.forEach()`
+
+      return max;
+    }
 }
