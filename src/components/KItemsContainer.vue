@@ -35,6 +35,7 @@ import KModal from '@/components/KModal.vue';
 import KItem from '@/components/KItem.vue';
 
 import RestService from '../services/RestService';
+import Utils from '../services/Utils';
 
 export default {
   name: 'KItemsContainer',
@@ -60,15 +61,7 @@ export default {
       if (!searchText) {
         return this.items;
       } else {
-        const regexp = new RegExp(searchText, 'igm')
-
-        const arr = this.items.filter(({title: {text: title}, description}) => {
-          return !!(regexp.test(title) || regexp.test((description)));
-        });
-
-        console.log(arr);
-
-        return arr;
+        return Utils.filterItems(this.items, searchText);
       }
     },
   },

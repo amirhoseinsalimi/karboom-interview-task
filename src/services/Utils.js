@@ -12,6 +12,14 @@ export default class Utils {
     return hexColor;
   }
 
+  static filterItems(items, text) {
+    const regexp = new RegExp(text, 'igm')
+
+    return items.filter(({title: {text: title}, description}) => {
+      return !!(regexp.test(title) || regexp.test((description)));
+    });
+  }
+
   static storeBiggestItemId(items) {
     const ids = [];
 
