@@ -1,3 +1,5 @@
+import store from '../store';
+
 export default class Utils {
     static generateRandomHexColor() {
         let hexColor = '#';
@@ -23,7 +25,7 @@ export default class Utils {
 }
 
 /**
- * Private utils that doesn't expose to outer modules
+ * Private utils that don't expose to outer modules
  * For internal usage only
  */
 class PrivateUtils {
