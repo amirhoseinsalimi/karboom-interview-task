@@ -55,6 +55,12 @@ export default {
     hasSlot() {
       return this.$slots.icon;
     }
+  },
+
+  created() {
+    EventBus.on('clear-input', () => {
+      this.text = '';
+    })
   }
 }
 </script>
