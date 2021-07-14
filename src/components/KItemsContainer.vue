@@ -36,6 +36,7 @@ import KItem from '@/components/KItem.vue';
 
 import RestService from '../services/RestService';
 import Utils from '../services/Utils';
+import EventBus from './../event-bus';
 
 export default {
   name: 'KItemsContainer',
@@ -71,6 +72,15 @@ export default {
   },
 
   methods: {
+    async fetchItems() {
+      try {
+        this.items = await RestService.index();
+      } catch (e) {
+        // TODO: Handle error
+        console.log(e)
+      }
+    },
+
     promptDeleteItem(id) {
       this.itemToBeDeleted = id;
       this.modal.displayed = true;
@@ -83,13 +93,12 @@ export default {
     },
   },
 
-  async beforeCreate() {
-    try {
-      this.items = await RestService.index();
-    } catch (e) {
-      // TODO: Handle error
-      console.log(e)
-    }
+  async created() {
+    await this.fetchItems();
+
+    EventBus.on('re-fetch-items', async () => {
+      await this.fetchItems();
+    });
   },
 }
 </script>
