@@ -31,9 +31,9 @@ export default {
 <style scoped lang="scss">
 .k-color-bar {
   & > .k-color-bar__inner {
-    width: 100%; // Take the entire space of the parent
-    max-width: 500px;
-    height: 8px;
+    display: inline-block;
+    width: 95%;
+    height: 10px;
     border: {
       radius: 5px;
     }
