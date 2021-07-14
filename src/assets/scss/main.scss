@@ -10,4 +10,5 @@
 
 [class*=-page] {
   min-height: $main-content-height;
+  padding: $main-content-padding-y $main-content-padding-x;
 }

@@ -1,76 +1,85 @@
 {
-  "data": {
-    "1": {
+  "data": [
+    {
+      "id": 1,
       "title": {
         "text": "Build"
       },
-      "description": "lorem ipsum dolor sit amet",
-      "img": "https://source.unsplash.com/random",
+      "description": "Start where you are, use what you have, do what you can.",
+      "img": "https://i.picsum.photos/id/137/200/300.jpg?hmac=5vAnK2h9wYgvt2769Z9D1XYb8ory9_zB0bqDgVjgAnk",
       "color": "#ec5858"
     },
-    "2": {
+    {
+      "id": 2,
       "title": {
         "text": "your"
       },
-      "description": "lorem ipsum dolor sit amet",
-      "img": "https://source.unsplash.com/random",
+      "description": "The creation of a thousand forests is in one acorn.",
+      "img": "https://i.picsum.photos/id/554/200/300.jpg?hmac=fYkNLoTqHRKUkIc3bZt_xMEb17s_BIRuuKTz8jb9ijs",
       "color": "#9ad3bc"
     },
-    "3": {
+    {
+      "id": 3,
       "title": {
         "text": "weaknesses"
       },
-      "description": "lorem ipsum dolor sit amet",
-      "img": "https://source.unsplash.com/random",
+      "description": "Just keep going. Everybody gets better if they keep at it.",
+      "img": "https://i.picsum.photos/id/35/200/300.jpg?hmac=No1hMogzX_PUqgWDfLRCc4wGPYTIeviBhJbzjqskoMA",
       "color": "#16a596"
     },
-    "4": {
+    {
+      "id": 4,
       "title": {
         "text": "until"
       },
-      "description": "lorem ipsum dolor sit amet",
-      "img": "https://source.unsplash.com/random",
+      "description": "Good things come to those who wait... greater things come to those who get off their ass and do anything to make it happen.",
+      "img": "https://i.picsum.photos/id/572/200/300.jpg?hmac=Rt4zD8IxoA-nMVDrBQ72mgbTVRfQ6OwW3MhWy_3lpdk",
       "color": "#b8de6f"
     },
-    "5": {
+    {
+      "id": 5,
       "title": {
         "text": "they"
       },
-      "description": "lorem ipsum dolor sit amet",
-      "img": "https://source.unsplash.com/random",
+      "description": "Obsessed is just a word the lazy use to describe the dedicated.",
+      "img": "https://i.picsum.photos/id/1073/200/300.jpg?hmac=j6ROutB6dK_56A4aAvjzWqBP0Q7RGmXYnHlL4T-R2a8",
       "color": "#2d6187"
     },
-    "6": {
+    {
+      "id": 6,
       "title": {
         "text": "become"
       },
-      "description": "lorem ipsum dolor sit amet",
-      "img": "https://source.unsplash.com/random",
+      "description": "You are not your resume, you are your work.",
+      "img": "https://i.picsum.photos/id/58/200/300.jpg?hmac=qRT-eFOBMZ3y8sE79s2DVAruVf-Hzv_4x_vmXaqUIMk",
       "color": "#28df99"
     },
-    "7": {
+    {
+      "id": 7,
       "title": {
         "text": "your"
       },
-      "description": "lorem ipsum dolor sit amet",
-      "img": "https://source.unsplash.com/random",
+      "description": "I feel that luck is preparation meeting opportunity.",
+      "img": "https://i.picsum.photos/id/510/200/300.jpg?hmac=u6iNoUL4S50O2eGkBF1jHRJL3Hgrbgdb258jroHPYeI",
       "color": "#9d65c9"
     },
-    "8": {
+    {
+      "id": 8,
       "title": {
         "text": "strong"
       },
-      "description": "lorem ipsum dolor sit amet",
-      "img": "https://source.unsplash.com/random",
+      "description": "You don't have to be great to start, but you have to start to be great.",
+      "img": "https://i.picsum.photos/id/99/200/300.jpg?hmac=Hnlwbe_FdfH-64B_lvRcwVnK7KViI5YgtT8AQRfkFwY",
       "color": "#3e978b"
     },
-    "9": {
+    {
+      "id": 9,
       "title": {
         "text": "points"
       },
-      "description": "lorem ipsum dolor sit amet",
-      "img": "https://source.unsplash.com/random",
+      "description": "There is no security on the earth, there is only opportunity.",
+      "img": "https://i.picsum.photos/id/195/200/300.jpg?hmac=4jGQkshsI0i2q2zt0L5AnB3c8yyqVBkmkYR0zDKIpRQ",
       "color": "#00334e"
     }
-  }
+  ]
 }

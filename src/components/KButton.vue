@@ -1,12 +1,13 @@
 <template>
   <button
-    :class="`k-button font--size-20 k-button--${size}`"
+    :class="`k-button font--size-20 k-button--${size} ${disabled && 'disabled'}`"
     :style="{
       backgroundColor,
       color,
       borderRadius: circular && '50%',
       cursor: disabled ? 'initial' : 'pointer',
     }"
+    @click="$emit('click')"
   >
     <slot></slot>
 
@@ -20,6 +21,8 @@
 <script>
 export default {
   name: 'KButton',
+
+  emits: ['click'],
 
   props: {
     // Parent may pass the content through `text` prop
@@ -68,8 +71,13 @@ export default {
 @import "src/assets/scss/typography";
 
 .k-button {
-  border: none;
+  border: {
+    style: solid;
+    radius: 6px;
+    color: transparent;
+  }
   padding: 10px;
+  transition: transform 400ms;
 
   &.k-button--sm {
     transform: scale(0.7);
@@ -81,6 +89,11 @@ export default {
 
   &:active, &:focus, &:focus-visible {
     box-shadow: none;
+  }
+
+  &.disabled {
+    // `!important` flag to overwrite the inline style
+    cursor: not-allowed !important;
   }
 }
 </style>
