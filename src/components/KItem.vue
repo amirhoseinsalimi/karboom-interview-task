@@ -20,6 +20,7 @@
           :size="deleteButtonSize"
           @mouseenter="changeButtonSizeTo('md')"
           @mouseleave="changeButtonSizeTo('sm')"
+          @click="$emit('delete', id)"
       >
         <img src="@/assets/svgs/bin.svg" alt="Search icon" />
       </k-button>
