@@ -7,7 +7,7 @@
         description,
         img: src,
         color
-      } of items"
+      } of filteredItems"
       :key="`${id}-${title}`"
       :id="+id"
       :title="title"
@@ -51,6 +51,26 @@ export default {
       },
       itemToBeDeleted: 0,
     }
+  },
+
+  computed: {
+    filteredItems() {
+      const searchText = this.$store.state.searchText;
+
+      if (!searchText) {
+        return this.items;
+      } else {
+        const regexp = new RegExp(searchText, 'igm')
+
+        const arr = this.items.filter(({title: {text: title}, description}) => {
+          return !!(regexp.test(title) || regexp.test((description)));
+        });
+
+        console.log(arr);
+
+        return arr;
+      }
+    },
   },
 
   methods: {
