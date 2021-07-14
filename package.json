@@ -10,6 +10,7 @@
     "dev": "concurrently \"yarn json:server\" \"yarn serve\""
   },
   "dependencies": {
+    "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "vue": "^3.0.0"
   },
