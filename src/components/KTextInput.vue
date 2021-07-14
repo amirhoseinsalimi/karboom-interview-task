@@ -16,6 +16,7 @@
         paddingLeft: hasSlot ? '40px' : '',
       }"
       @input="$emit('input', searchText)"
+      @keyup.enter="$emit('enterkey')"
     >
   </label>
 </template>
@@ -40,7 +41,7 @@ export default {
   // This component is a general purpose component, so it should not mutate the
   // state directly. Instead, it should emit the data to the parent, and then
   // the parent decides what to do with the event: e.g. mutate the state.
-  emits: ['input'],
+  emits: ['input', 'enterkey'],
 
   data() {
     return {
