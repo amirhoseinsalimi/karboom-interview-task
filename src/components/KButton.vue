@@ -70,6 +70,7 @@ export default {
 .k-button {
   border: none;
   padding: 10px;
+  transition: transform 400ms;
 
   &.k-button--sm {
     transform: scale(0.7);
