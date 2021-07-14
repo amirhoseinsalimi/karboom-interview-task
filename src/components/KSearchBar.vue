@@ -3,6 +3,7 @@
     <k-text-input
       placeholder="Search something..."
       @input="saveTextInStore"
+      @enterkey="createItem"
     >
       <template v-slot:icon>
         <img src="@/assets/svgs/search.svg" alt="Search icon" />
@@ -13,7 +14,8 @@
         :circular="true"
         backgroundColor="#F0F0F0"
         size="sm"
-        :disabled="false"
+        :disabled="!$store.getters.isResultsEmpty"
+        @click="createItem"
     >
       <img src="@/assets/svgs/plus.svg" alt="Search icon" />
     </k-button>
@@ -22,7 +24,10 @@
 
 <script>
 import KTextInput from '@/components/KTextInput.vue';
-import KButton from "@/components/KButton.vue";
+import KButton from '@/components/KButton.vue';
+
+import RestService from '../services/RestService';
+import Utils from '../services/Utils';
 
 export default {
   name: 'KSearchBar',
@@ -35,6 +40,23 @@ export default {
   methods: {
     saveTextInStore(text) {
       this.$store.commit('storeSearchText', text);
+    },
+
+    async createItem() {
+      // Send the request only if the `isResultsEmpty`
+      if (this.$store.getters.isResultsEmpty) {
+        const newItem = {
+          id: ++this.$store.state.biggestItemId,
+          title: {
+            text: this.$store.state.searchText,
+          },
+          description: this.$store.state.lastItem.description,
+          img: this.$store.state.lastItem.img,
+          color: Utils.generateRandomHexColor(),
+        };
+
+        await RestService.create(newItem);
+      }
     }
   }
 }
