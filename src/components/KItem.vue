@@ -1,15 +1,15 @@
 <template>
   <div class="k-item">
     <k-item-image
-        src="https://source.unsplash.com/random"
-        alt="img"
+        :src="src"
+        :alt="alt"
         class="k-item__image"
     />
 
     <div class="k-item__content">
       <k-item-content
-          title="Title"
-          description="Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+          :title="title"
+          :description="description"
       />
     </div>
 
@@ -37,14 +37,40 @@ import KItemImage from './KItemImage';
 import KItemContent from './KItemContent';
 import KButton from './KButton';
 
-import Utils from "../services/Utils";
-
 export default {
   name: 'KItem',
 
+  props: {
+    id: {
+      type: Number,
+      required: true,
+    },
+    title: {
+      type: String,
+      required: true,
+    },
+    description: {
+      type: String,
+      required: true,
+    },
+    src: {
+      type: String,
+      required: true,
+    },
+    alt: {
+      type: String,
+      required: true,
+    },
+    color: {
+      type: String,
+      required: true,
+    },
+  },
+
+  emits: ['delete'],
+
   data() {
     return {
-      color: Utils.generateRandomHexColor(),
       deleteButtonSize: 'sm'
     };
   },
@@ -60,7 +86,7 @@ export default {
     changeButtonSizeTo(size) {
       this.deleteButtonSize = size;
     }
-  }
+  },
 }
 </script>
 
