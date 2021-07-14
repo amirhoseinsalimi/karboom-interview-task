@@ -72,8 +72,8 @@ export default {
       this.modal.displayed = true;
     },
 
-    deleteItem(id) {
-      RestService.delete(id);
+    async deleteItem(id) {
+      await RestService.delete(id);
     },
   },
 
