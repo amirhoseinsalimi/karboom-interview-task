@@ -32,6 +32,11 @@ class PrivateUtils {
         return characters[randomNumber];
     }
 
+    /**
+     * Generate a random number equal or lesser than the specified `max`
+     * @param max
+     * @returns {number}
+     */
     static generateRandomNumber(max) {
         return Math.floor(Math.random() * max)
     }
