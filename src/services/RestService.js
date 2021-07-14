@@ -14,6 +14,15 @@ export class RestService {
     }
   }
 
+  async create(newItem) {
+    try {
+      await axios.post('/data', newItem);
+    } catch (e) {
+      // TODO: Handle error
+      console.log(e);
+    }
+  }
+
   async delete(id) {
     try {
       const { data } = await axios.delete(`/data/${id}`);
