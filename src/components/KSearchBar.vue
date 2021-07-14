@@ -38,7 +38,8 @@ export default {
     radius: 8px;
   }
   padding: 2px 10px;
-  width: 400px;
+  width: 600px;
+  max-width: 90%;
   display: inline-flex;
   flex-flow: row-reverse wrap;
   justify-content: space-around;
