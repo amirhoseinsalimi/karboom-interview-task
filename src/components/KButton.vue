@@ -1,6 +1,6 @@
 <template>
   <button
-    :class="`k-button font--size-20 k-button--${size}`"
+    :class="`k-button font--size-20 k-button--${size} ${disabled && 'disabled'}`"
     :style="{
       backgroundColor,
       color,
@@ -86,6 +86,11 @@ export default {
 
   &:active, &:focus, &:focus-visible {
     box-shadow: none;
+  }
+
+  &.disabled {
+    // `!important` flag to overwrite the inline style
+    cursor: not-allowed !important;
   }
 }
 </style>
