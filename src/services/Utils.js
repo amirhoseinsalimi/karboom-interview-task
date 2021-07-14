@@ -15,9 +15,13 @@ export default class Utils {
   static filterItems(items, text) {
     const regexp = new RegExp(text, 'igm')
 
-    return items.filter(({title: {text: title}, description}) => {
+    const filtered = items.filter(({title: {text: title}, description}) => {
       return !!(regexp.test(title) || regexp.test((description)));
     });
+
+    store.commit('changeFilteredItems', filtered);
+
+    return filtered;
   }
 
   static storeBiggestItemId(items) {
@@ -29,6 +33,10 @@ export default class Utils {
     });
 
     store.commit('changeBiggestItemId', PrivateUtils.max(ids));
+  }
+
+  static storeLastItem(item) {
+    store.commit('storeLastItem', item);
   }
 }
 
