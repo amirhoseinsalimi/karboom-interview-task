@@ -79,7 +79,7 @@ $border-radius: 30px;
 
   .k-text-input__icon {
     position: absolute;
-    top: -50%;
+    top: calc(50% - 15px);
     left: 10px;
   }
 }
