@@ -29,7 +29,6 @@ export default createStore({
     },
 
     storeLastItem(state, item) {
-      console.log(item);
       state.lastItem = item;
     }
   },

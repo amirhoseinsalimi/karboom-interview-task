@@ -28,6 +28,7 @@ import KButton from '@/components/KButton.vue';
 
 import RestService from '../services/RestService';
 import Utils from '../services/Utils';
+import EventBus from './../event-bus';
 
 export default {
   name: 'KSearchBar',
@@ -56,6 +57,13 @@ export default {
         };
 
         await RestService.create(newItem);
+
+        // Clear the text input
+        this.saveTextInStore('');
+        EventBus.emit('clear-input');
+
+        // Emit an event on EventBus
+        EventBus.emit('re-fetch-items');
       }
     }
   }

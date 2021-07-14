@@ -10,18 +10,20 @@
 
     <input
       type="text"
-      v-model="searchText"
+      v-model="text"
       :placeholder="placeholder"
       :style="{
         paddingLeft: hasSlot ? '40px' : '',
       }"
-      @input="$emit('input', searchText)"
+      @input="$emit('input', text)"
       @keyup.enter="$emit('enterkey')"
     >
   </label>
 </template>
 
 <script>
+import EventBus from './../event-bus';
+
 export default {
   name: 'KTextInput',
 
@@ -45,7 +47,7 @@ export default {
 
   data() {
     return {
-      searchText: '',
+      text: '',
     }
   },
 
@@ -53,6 +55,12 @@ export default {
     hasSlot() {
       return this.$slots.icon;
     }
+  },
+
+  created() {
+    EventBus.on('clear-input', () => {
+      this.text = '';
+    })
   }
 }
 </script>

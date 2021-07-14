@@ -24,7 +24,7 @@
     @accept="deleteItem(itemToBeDeleted)"
     @refuse="modal.displayed = false"
     header="Are you sure?"
-    :body='`The item "${items[itemToBeDeleted].title.text}" will be deleted. This action cannot be undone.`'
+    :body='`The item "${itemToBeDeletedTitle}" will be deleted. This action cannot be undone.`'
     accept-text="Delete"
     refuse-text="Cancel"
   />
@@ -36,6 +36,7 @@ import KItem from '@/components/KItem.vue';
 
 import RestService from '../services/RestService';
 import Utils from '../services/Utils';
+import EventBus from './../event-bus';
 
 export default {
   name: 'KItemsContainer',
@@ -64,9 +65,22 @@ export default {
         return Utils.filterItems(this.items, searchText);
       }
     },
+
+    itemToBeDeletedTitle() {
+      return this.items.find(({ id }) => this.itemToBeDeleted === id).title.text
+    }
   },
 
   methods: {
+    async fetchItems() {
+      try {
+        this.items = await RestService.index();
+      } catch (e) {
+        // TODO: Handle error
+        console.log(e)
+      }
+    },
+
     promptDeleteItem(id) {
       this.itemToBeDeleted = id;
       this.modal.displayed = true;
@@ -74,16 +88,17 @@ export default {
 
     async deleteItem(id) {
       await RestService.delete(id);
+      this.items = await RestService.index();
+      this.modal.displayed = false;
     },
   },
 
-  async beforeCreate() {
-    try {
-      this.items = await RestService.index('/data');
-    } catch (e) {
-      // TODO: Handle error
-      console.log(e)
-    }
+  async created() {
+    await this.fetchItems();
+
+    EventBus.on('re-fetch-items', async () => {
+      await this.fetchItems();
+    });
   },
 }
 </script>

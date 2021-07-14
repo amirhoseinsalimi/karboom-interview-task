@@ -1,33 +1,33 @@
 <template>
   <div class="k-item">
     <k-item-image
-        :src="src"
-        :alt="alt"
-        class="k-item__image"
+      :src="src"
+      :alt="alt"
+      class="k-item__image"
     />
 
     <div class="k-item__content">
       <k-item-content
-          :title="title"
-          :description="description"
+        :title="title"
+        :description="description"
       />
     </div>
 
     <div class="k-item__actions">
       <k-button
-          :circular="true"
-          backgroundColor="transparent"
-          :size="deleteButtonSize"
-          @mouseenter="changeButtonSizeTo('md')"
-          @mouseleave="changeButtonSizeTo('sm')"
-          @click="$emit('delete', id)"
+        :circular="true"
+        backgroundColor="transparent"
+        :size="deleteButtonSize"
+        @mouseenter="changeButtonSizeTo('md')"
+        @mouseleave="changeButtonSizeTo('sm')"
+        @click="$emit('delete', id)"
       >
-        <img src="@/assets/svgs/bin.svg" alt="Search icon" />
+        <img src="@/assets/svgs/bin.svg" alt="Search icon"/>
       </k-button>
     </div>
 
     <div class="k-item__footer">
-      <k-color-bar :color="color" class="mx-auto" />
+      <k-color-bar :color="color" class="mx-auto"/>
     </div>
   </div>
 </template>
