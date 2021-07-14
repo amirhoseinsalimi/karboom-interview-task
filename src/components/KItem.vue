@@ -14,9 +14,14 @@
     </div>
 
     <div class="k-item__actions">
-
-      <k-button class="font--size-20">
-        Salam
+      <k-button
+          :circular="true"
+          backgroundColor="transparent"
+          :size="deleteButtonSize"
+          @mouseenter="changeButtonSizeTo('md')"
+          @mouseleave="changeButtonSizeTo('sm')"
+      >
+        <img src="@/assets/svgs/bin.svg" alt="Search icon" />
       </k-button>
     </div>
 
@@ -40,6 +45,7 @@ export default {
   data() {
     return {
       color: Utils.generateRandomHexColor(),
+      deleteButtonSize: 'sm'
     };
   },
 
@@ -49,6 +55,12 @@ export default {
     KColorBar,
     KButton,
   },
+
+  methods: {
+    changeButtonSizeTo(size) {
+      this.deleteButtonSize = size;
+    }
+  }
 }
 </script>
 
