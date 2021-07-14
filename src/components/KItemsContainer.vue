@@ -24,7 +24,7 @@
     @accept="deleteItem(itemToBeDeleted)"
     @refuse="modal.displayed = false"
     header="Are you sure?"
-    :body='`The item "${items[itemToBeDeleted].title.text}" will be deleted. This action cannot be undone.`'
+    :body='`The item "${itemToBeDeletedTitle}" will be deleted. This action cannot be undone.`'
     accept-text="Delete"
     refuse-text="Cancel"
   />
@@ -64,6 +64,10 @@ export default {
         return Utils.filterItems(this.items, searchText);
       }
     },
+
+    itemToBeDeletedTitle() {
+      return this.items.find(({ id }) => this.itemToBeDeleted === id).title.text
+    }
   },
 
   methods: {
