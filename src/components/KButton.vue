@@ -1,11 +1,11 @@
 <template>
   <button
-    class="k-button font--size-20"
+    :class="`k-button font--size-20 k-button--${size}`"
     :style="{
       backgroundColor,
       color,
       borderRadius: circular && '50%',
-      pointer: disabled && 'initial',
+      cursor: disabled ? 'initial' : 'pointer',
     }"
   >
     <slot></slot>
@@ -70,6 +70,14 @@ export default {
 .k-button {
   border: none;
   padding: 10px;
+
+  &.k-button--sm {
+    transform: scale(0.7);
+  }
+
+  &.k-button--lg {
+    transform: scale(1.2);
+  }
 
   &:active, &:focus, &:focus-visible {
     box-shadow: none;
