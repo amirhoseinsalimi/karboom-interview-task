@@ -7,6 +7,7 @@
       borderRadius: circular && '50%',
       cursor: disabled ? 'initial' : 'pointer',
     }"
+    @click="$emit('click')"
   >
     <slot></slot>
 
@@ -20,6 +21,8 @@
 <script>
 export default {
   name: 'KButton',
+
+  emits: ['click'],
 
   props: {
     // Parent may pass the content through `text` prop
