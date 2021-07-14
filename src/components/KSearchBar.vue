@@ -1,6 +1,9 @@
 <template>
   <div class="k-search-bar">
-    <k-text-input placeholder="Search something...">
+    <k-text-input
+      placeholder="Search something..."
+      @input="saveTextInStore"
+    >
       <template v-slot:icon>
         <img src="@/assets/svgs/search.svg" alt="Search icon" />
       </template>
@@ -27,6 +30,12 @@ export default {
   components: {
     KTextInput,
     KButton,
+  },
+
+  methods: {
+    saveTextInStore(text) {
+      this.$store.commit('storeSearchText', text);
+    }
   }
 }
 </script>
