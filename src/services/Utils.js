@@ -9,6 +9,17 @@ export default class Utils {
 
         return hexColor;
     }
+
+    static storeBiggestItemId(items) {
+      const ids = [];
+
+      // Compute the biggest ID between item ids
+      items.forEach(({ id }) => {
+        ids.push(id);
+      });
+
+      store.commit('changeBiggestItemId', PrivateUtils.max(ids));
+    }
 }
 
 /**
