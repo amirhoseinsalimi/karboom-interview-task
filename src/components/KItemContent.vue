@@ -1,10 +1,14 @@
 <template>
-  <h4 class="k-item-content__title">
-    {{ title }}
-  </h4>
-  <p class="k-item-content__title">
-    {{ description }}
-  </p>
+  <div class="k-item-content">
+    <h4 class="k-item-content__title">
+      {{ title }}
+    </h4>
+    <p class="k-item-content__description">
+      <span>
+        {{ description }}
+      </span>
+    </p>
+  </div>
 </template>
 
 <script>
@@ -25,17 +29,24 @@ export default {
 </script>
 
 <style scoped lang="scss">
-* {
-  display: inline-block;
-}
+.k-item-content {
+  display: flex;
+  flex-flow: column wrap;
+  text-align: right;
+  align-items: flex-end;
 
-.k-item-content__title {
-  font: {
-    weight: bold;
+  .k-item-content__title {
+    font: {
+      weight: bold;
+    }
   }
-}
 
-.k-item-content__description {
-  color: #aaa;
+  .k-item-content__description {
+    color: #aaa;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 300px;
+  }
 }
 </style>
