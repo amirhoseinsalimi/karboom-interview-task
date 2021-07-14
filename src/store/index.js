@@ -4,6 +4,16 @@ export default createStore({
   state: {
     searchText: '',
     biggestItemId: '',
+    filteredItems: [],
+    lastItem: {},
+  },
+  getters: {
+    isResultsEmpty(state) {
+      // This means the user has searched for something
+      // and got no results. So, he should be able to add
+      // a new item now.
+      return state.searchText && !state.filteredItems.length;
+    }
   },
   mutations: {
     storeSearchText(state, text) {
@@ -12,6 +22,15 @@ export default createStore({
 
     changeBiggestItemId(state, id) {
       state.biggestItemId = +id;
+    },
+
+    changeFilteredItems(state, items) {
+      state.filteredItems = items;
+    },
+
+    storeLastItem(state, item) {
+      console.log(item);
+      state.lastItem = item;
     }
   },
   actions: {
