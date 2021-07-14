@@ -1,9 +1,12 @@
 import axios from '../plugins/axios';
+import Utils from './Utils';
 
 export class RestService {
   async index() {
     try {
       const { data: items } = await axios.get('/data');
+
+      Utils.storeBiggestItemId(items);
 
       return items;
     } catch (e) {
