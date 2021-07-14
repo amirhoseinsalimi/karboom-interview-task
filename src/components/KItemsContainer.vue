@@ -106,7 +106,7 @@ export default {
 <style scoped lang="scss">
 .k-items-container {
   display: inline-block;
-  width: 600px;
+  width: 50em;
   max-width: 90%;
 }
 </style>

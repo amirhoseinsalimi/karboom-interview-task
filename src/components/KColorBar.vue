@@ -33,9 +33,9 @@ export default {
   & > .k-color-bar__inner {
     display: inline-block;
     width: 95%;
-    height: 10px;
+    height: 1em;
     border: {
-      radius: 5px;
+      radius: 0.5em;
     }
   }
 }

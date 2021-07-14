@@ -74,10 +74,10 @@ export default {
 .k-search-bar {
   background: #DCE2E8;
   border: {
-    radius: 8px;
+    radius: 0.8em;
   }
-  padding: 2px 10px;
-  width: 600px;
+  padding: 0.2em 1em;
+  width: 50em;
   max-width: 90%;
   display: inline-flex;
   flex-flow: row-reverse wrap;

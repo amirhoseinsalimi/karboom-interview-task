@@ -36,7 +36,7 @@ export default {
   align-content: center;
 
   .k-search-bar {
-    margin-bottom: 40px;
+    margin-bottom: 2em;
   }
 }
 </style>

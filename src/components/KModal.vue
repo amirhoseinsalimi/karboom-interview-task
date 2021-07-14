@@ -89,12 +89,12 @@ export default {
 }
 
 .k-modal__container {
-  width: 300px;
+  width: 24em;
   margin: 0 auto;
-  padding: 20px 30px;
+  padding: 1.5em 2.5em;
   background-color: #fff;
-  border-radius: 2px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  border-radius: 0.2em;
+  box-shadow: 0 0.2em 0.8em rgba(0, 0, 0, 0.33);
   transition: all 0.3s ease;
 }
 
@@ -104,7 +104,7 @@ export default {
 }
 
 .k-modal__body {
-  margin: 20px 0;
+  margin: 2em 0;
 }
 
 .k-modal__actions {

@@ -73,10 +73,10 @@ export default {
 .k-button {
   border: {
     style: solid;
-    radius: 6px;
+    radius: 0.6em;
     color: transparent;
   }
-  padding: 10px;
+  padding: 1em;
   transition: transform 400ms;
 
   &.k-button--sm {

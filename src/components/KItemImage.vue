@@ -24,11 +24,11 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$size: 60px;
+$size: 6em;
 
 .k-item-image {
   border: {
-    radius: 10px;
+    radius: 1em;
   };
   background: {
     color: #bbb;

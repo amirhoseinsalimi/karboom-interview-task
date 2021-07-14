@@ -9,11 +9,12 @@
     </span>
 
     <input
+        class="font-size--16"
       type="text"
       v-model="text"
       :placeholder="placeholder"
       :style="{
-        paddingLeft: hasSlot ? '40px' : '',
+        paddingLeft: hasSlot ? '4em' : '',
       }"
       @input="$emit('input', text)"
       @keyup.enter="$emit('enterkey')"
@@ -66,7 +67,7 @@ export default {
 </script>
 
 <style scoped lang="scss">
-$border-radius: 30px;
+$border-radius: 3em;
 
 .k-text-input {
   position: relative;
@@ -74,7 +75,7 @@ $border-radius: 30px;
   input {
     width: 100%;
     background: #F0F0F0;
-    padding: 14px;
+    padding: 1em;
     border: {
       style: solid;
       radius: $border-radius;
