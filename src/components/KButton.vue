@@ -5,7 +5,7 @@
       backgroundColor,
       color,
       borderRadius: circular && '50%',
-      pointer: disabled && 'initial',
+      cursor: disabled ? 'initial' : 'pointer',
     }"
   >
     <slot></slot>
