@@ -78,6 +78,8 @@ export default {
 
     async deleteItem(id) {
       await RestService.delete(id);
+      this.items = await RestService.index();
+      this.modal.displayed = false;
     },
   },
 
