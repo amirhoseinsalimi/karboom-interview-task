@@ -1,2 +1,12 @@
 @import "variables";
 @import "typography";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+[class*=-page] {
+  min-height: $main-content-height;
+}
