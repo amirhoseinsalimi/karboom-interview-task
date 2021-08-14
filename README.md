@@ -1,24 +1,3 @@
-# vue-quiz
+# karboom-quiz
 
-## Project setup
-```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn dev
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+This is the test task that I had to do for Karboom technical interview. The role that I had applied for was "Front-end (Vue.js) Developer" (Tir, 1400).
